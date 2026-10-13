@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<!--
+  Aura One - Modern Product Landing Page (HTML + CSS only, no JavaScript)
+  Structure:
+    1. Navbar (sticky)          5. Pricing (3 plans)
+    2. Hero                     6. Testimonials (CSS-only carousel)
+    3. Features (CSS Grid)      7. FAQ (details / summary)
+    4. Product showcase         8. Footer
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Aura One wireless headphones with noise cancelling and a 40-hour battery.">
+  <title>Aura One | Headphones</title>
+
+  <!-- Google Font: Sora (weights 400, 600, 700) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Link to the stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== NAVBAR (sticky) ===== -->
+  <header class="navbar">
+    <nav class="container nav-inner" aria-label="Main">
+      <a href="#home" class="logo">Aura<span>One</span></a>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#showcase">Colors</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <a href="#pricing" class="btn btn-primary">Buy Now</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="home">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Your sound. Nothing else.</h1>
+          <p class="tagline">Aura One blocks the noise around you and plays for 40 hours on a single charge.</p>
+          <div class="hero-actions">
+            <a href="#showcase" class="btn btn-primary btn-lg">Buy Now</a>
+            <a href="#features" class="btn btn-ghost btn-lg">See features</a>
+          </div>
+          <ul class="stats">
+            <li><strong>40 hrs</strong>battery life</li>
+            <li><strong>35 dB</strong>noise cancelling</li>
+            <li><strong>5.3</strong>Bluetooth</li>
+          </ul>
+        </div>
+        <div class="hero-visual">
+          <img class="hero-img" src="images/premium.png" alt="Aura One wireless headphones in rose pink">
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FEATURES (CSS Grid, 6 cards) ===== -->
+    <section class="features container" id="features">
+      <div class="section-head">
+        <h2>Built for the way you listen</h2>
+        <p>Six features built into one pair of headphones.</p>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v18M8 7v10M4 10v4M16 7v10M20 10v4"/></svg></span>
+          <h3>Noise cancelling</h3>
+          <p>Blocks traffic, fans and office chatter so you can focus.</p>
+        </article>
+        <article class="card">
+          <span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="16" height="9" rx="2"/><path d="M21 11v3"/></svg></span>
+          <h3>40-hour battery</h3>
+          <p>Listen all week on one charge.</p>
+        </article>
+        <article class="card">
+          <span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10-5 5V2l5 5L7 17"/></svg></span>
+          <h3>Bluetooth 5.3</h3>
+          <p>Connects fast and stays connected up to 10 metres away.</p>
+        </article>
+        <article class="card">
+          <span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2L4 14h7l-1 8 9-12h-7z"/></svg></span>
+          <h3>Fast charge</h3>
+          <p>A 10-minute charge gives you 5 hours of playback.</p>
+        </article>
+        <article class="card">
+          <span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg></span>
+          <h3>Clear calls</h3>
+          <p>Two built-in microphones keep your voice clear on calls.</p>
+        </article>
+        <article class="card">
+          <span class="icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8l8-4 8 4v8l-8 4-8-4z"/><path d="M4 8l8 4 8-4M12 12v8"/></svg></span>
+          <h3>Foldable design</h3>
+          <p>Folds flat and slides into your bag without a fuss.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===== PRODUCT SHOWCASE (CSS-only tabs: radio button hack) ===== -->
+    <section class="showcase" id="showcase">
+      <div class="container">
+        <div class="section-head">
+          <h2>Pick your color</h2>
+          <p>Same headphones, three finishes. Choose the one that suits you.</p>
+        </div>
+
+        <!-- Hidden radio buttons: the checked one decides the color (no JavaScript) -->
+        <input type="radio" name="color" id="c-rose" checked>
+        <input type="radio" name="color" id="c-mint">
+        <input type="radio" name="color" id="c-lilac">
+
+        <!-- Tabs: each label is linked to a radio button -->
+        <div class="tabs">
+          <label for="c-rose"><i class="dot dot-rose"></i>Rose</label>
+          <label for="c-mint"><i class="dot dot-mint"></i>Mint</label>
+          <label for="c-lilac"><i class="dot dot-lilac"></i>Lilac</label>
+        </div>
+
+        <!-- Product image and details for the selected color -->
+        <div class="stage">
+          <div class="product-wrap">
+            <img class="product-img" src="images/premium.png" alt="Aura One headphones in the selected color">
+          </div>
+          <div class="panel">
+            <p class="name name-rose">Rose</p>
+            <p class="name name-mint">Mint</p>
+            <p class="name name-lilac">Lilac</p>
+            <p class="desc desc-rose">Soft rose pink with a mirror finish.</p>
+            <p class="desc desc-mint">Cool mint and teal, fresh and bright.</p>
+            <p class="desc desc-lilac">Gentle lilac that stands out from the crowd.</p>
+            <ul class="specs">
+              <li><span>Noise cancelling</span>35 dB</li>
+              <li><span>Battery</span>40 hours</li>
+              <li><span>Weight</span>250 g</li>
+            </ul>
+            <p class="price">$169 <span class="price-note">Premium plan. See all plans for other options.</span></p>
+            <a href="#pricing" class="btn btn-primary btn-lg">See plans</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PRICING (3 plans, middle one highlighted) ===== -->
+    <section class="pricing container" id="pricing">
+      <div class="section-head">
+        <h2>Choose your plan</h2>
+        <p>Same headphones in every plan. Pick how much extra you want in the box.</p>
+      </div>
+      <div class="plans">
+
+        <article class="plan">
+          <div class="plan-media"><img src="images/basic.png" alt="Basic plan headphones"></div>
+          <h3>Basic</h3>
+          <p class="amount">$99</p>
+          <p class="plan-note">Everything you need to start.</p>
+          <ul>
+            <li>Aura One headphones</li>
+            <li>USB-C charging cable</li>
+            <li>1-year warranty</li>
+          </ul>
+          <a href="#faq" class="btn btn-outline">Choose Basic</a>
+        </article>
+
+        <!-- Middle plan: highlighted and larger -->
+        <article class="plan featured">
+          <span class="badge">Most popular</span>
+          <div class="plan-media"><img src="images/pro.png" alt="Pro plan headphones"></div>
+          <h3>Pro</h3>
+          <p class="amount">$129</p>
+          <p class="plan-note">The best value for most people.</p>
+          <ul>
+            <li>Everything in Basic</li>
+            <li>Hard travel case</li>
+            <li>Spare ear pads</li>
+            <li>2-year warranty</li>
+          </ul>
+          <a href="#faq" class="btn btn-primary">Choose Pro</a>
+        </article>
+
+        <article class="plan">
+          <div class="plan-media"><img src="images/premium.png" alt="Premium plan headphones"></div>
+          <h3>Premium</h3>
+          <p class="amount">$169</p>
+          <p class="plan-note">For people who want it all.</p>
+          <ul>
+            <li>Everything in Pro</li>
+            <li>Name engraving</li>
+            <li>Priority support</li>
+            <li>3-year warranty</li>
+          </ul>
+          <a href="#faq" class="btn btn-outline">Choose Premium</a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS (CSS-only carousel, radio buttons) ===== -->
+    <section class="reviews" id="reviews">
+      <div class="container testi">
+
+        <!-- Hidden radio buttons: the checked one decides which review is shown -->
+        <input type="radio" name="slide" id="t1" checked>
+        <input type="radio" name="slide" id="t2">
+        <input type="radio" name="slide" id="t3">
+
+        <div class="testi-grid">
+
+          <!-- Left side: heading, overall rating and controls -->
+          <div class="testi-intro">
+            <h2>Loved by listeners everywhere</h2>
+            <p>Honest feedback from people who use Aura One every day.</p>
+            <div class="rating">
+              <strong>4.8</strong>
+              <div>
+                <span class="stars" aria-label="4.8 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                <small>from 2,300+ reviews</small>
+              </div>
+            </div>
+            <div class="controls">
+              <!-- Arrows: only the pair for the current review is shown -->
+              <div class="arrows">
+                <label for="t3" class="arrow prev s1" aria-label="Previous review"></label>
+                <label for="t2" class="arrow next s1" aria-label="Next review"></label>
+                <label for="t1" class="arrow prev s2" aria-label="Previous review"></label>
+                <label for="t3" class="arrow next s2" aria-label="Next review"></label>
+                <label for="t2" class="arrow prev s3" aria-label="Previous review"></label>
+                <label for="t1" class="arrow next s3" aria-label="Next review"></label>
+              </div>
+              <!-- Dots -->
+              <div class="dots">
+                <label for="t1" aria-label="Show review 1"></label>
+                <label for="t2" aria-label="Show review 2"></label>
+                <label for="t3" aria-label="Show review 3"></label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right side: the reviews (the checked radio moves the track) -->
+          <div class="viewport">
+            <div class="track">
+              <figure class="slide">
+                <div class="review">
+                  <div class="review-top">
+                    <span class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    <span class="tag">Pro plan</span>
+                  </div>
+                  <blockquote>The noise cancelling is so good that I can study in a busy hostel and hear nothing but my music.</blockquote>
+                  <figcaption>
+                    <span class="avatar av1">AK</span>
+                    <span><strong>Ayesha K.</strong><small>Software engineering student &middot; Verified buyer</small></span>
+                  </figcaption>
+                </div>
+              </figure>
+              <figure class="slide">
+                <div class="review">
+                  <div class="review-top">
+                    <span class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                    <span class="tag">Premium plan</span>
+                  </div>
+                  <blockquote>One charge lasted me the whole week of travel. I kept forgetting where I put the cable.</blockquote>
+                  <figcaption>
+                    <span class="avatar av2">HR</span>
+                    <span><strong>Hamza R.</strong><small>Freelance video editor &middot; Verified buyer</small></span>
+                  </figcaption>
+                </div>
+              </figure>
+              <figure class="slide">
+                <div class="review">
+                  <div class="review-top">
+                    <span class="stars" aria-label="4 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+                    <span class="tag">Basic plan</span>
+                  </div>
+                  <blockquote>Light, comfortable and folds flat. My calls are clear even on a noisy road.</blockquote>
+                  <figcaption>
+                    <span class="avatar av3">SM</span>
+                    <span><strong>Sara M.</strong><small>Daily commuter &middot; Verified buyer</small></span>
+                  </figcaption>
+                </div>
+              </figure>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ (CSS-only accordion with details/summary) ===== -->
+    <section class="faq" id="faq">
+      <div class="container faq-grid">
+
+        <!-- Left side: heading and support box -->
+        <div class="faq-intro">
+          <h2>Frequently asked questions</h2>
+          <p>Everything you need to know about Aura One before you buy.</p>
+          <div class="support">
+            <strong>Still have questions?</strong>
+            <span>Our support team replies within 24 hours.</span>
+            <a href="mailto:support@auraone.example" class="btn btn-primary">Contact support</a>
+          </div>
+        </div>
+
+        <!-- Right side: accordion (only one answer open at a time) -->
+        <div class="faq-list">
+        <details name="faq" open>
+          <summary>How long does the battery last?</summary>
+          <p>Up to 40 hours of playback on one charge. A 10-minute fast charge gives you about 5 hours.</p>
+        </details>
+        <details name="faq">
+          <summary>Do the headphones work with iPhone and Android?</summary>
+          <p>Yes. They connect over Bluetooth 5.3, so they work with any phone, tablet or laptop.</p>
+        </details>
+        <details name="faq">
+          <summary>How do I pair them with my phone?</summary>
+          <p>Hold the power button for three seconds until the light blinks, then choose Aura One in your Bluetooth settings.</p>
+        </details>
+        <details name="faq">
+          <summary>Can I use them with a cable?</summary>
+          <p>Yes. Plug in the USB-C cable and you can keep listening while they charge.</p>
+        </details>
+        <details name="faq">
+          <summary>What does the warranty cover?</summary>
+          <p>Manufacturing faults and battery problems. The warranty is 1, 2 or 3 years, depending on your plan.</p>
+        </details>
+        <details name="faq">
+          <summary>Can I return them if I don't like them?</summary>
+          <p>Yes. You have 30 days to try them and send them back for a full refund.</p>
+        </details>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="#home" class="logo">Aura<span>One</span></a>
+      <ul class="footer-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#showcase">Colors</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+      <p>&copy; 2026 Aura One. A fictional product for a class project.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
